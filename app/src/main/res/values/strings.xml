@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">UabcsEstudiantil</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="tab_text_1">Tab1</string>
+    <string name="tab_text_2">Tab2</string>
+    <string name="title_mapa">Mapa</string>
+    <string name="title_usuario">Ususario</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">hola perro soy el fragment mapa :v</string>
+    <string name="hello_blank_fragment_usuario">hola perro soy el fragment usuario :v</string>
 </resources>
