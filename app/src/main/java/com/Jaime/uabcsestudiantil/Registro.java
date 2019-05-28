@@ -38,6 +38,8 @@ public class Registro extends AppCompatActivity {
                     if (pass1.getText().toString().equals(pass2.getText().toString())){
                         if (pass1.getText().toString().trim().length()>6 ){
 
+                            //agregar al firebase :V
+
                         }else{
                             Toast.makeText(getApplicationContext(),
                                     "Contraseñas muy pequeña",

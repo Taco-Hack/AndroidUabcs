@@ -44,7 +44,7 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:digits="abcdefghijklmnopqrstuvwxyz0123456789.@_- "
+        android:digits="abcdefghijklmnopqrstuvwxyz0123456789.@_-"
         android:singleLine="true"
         app:layout_constraintBottom_toTopOf="@+id/xmlETxtPas1"
         app:layout_constraintEnd_toEndOf="parent"
