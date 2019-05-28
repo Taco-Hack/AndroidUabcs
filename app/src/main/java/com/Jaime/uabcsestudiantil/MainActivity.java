@@ -7,12 +7,20 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button ok;
+    Button ok,registro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ok=findViewById(R.id.xmlStart);
+        registro=findViewById(R.id.xmlBtnRegistro);
+        registro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Registro.class);
+                startActivity(i);
+            }
+        });
 
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
