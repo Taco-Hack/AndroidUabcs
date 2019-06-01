@@ -1,29 +1,27 @@
 package com.Jaime.uabcsestudiantil;
 
-import android.app.Activity;
-import android.nfc.Tag;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 
-import static android.app.PendingIntent.getActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Registro extends AppCompatActivity {
     private EditText name,lName,email,pass1,pass2;
     private Button ok;
-    private FirebaseAuth mAuth;
+    private DatabaseReference bd;
 
 
     @Override
@@ -37,8 +35,10 @@ public class Registro extends AppCompatActivity {
         pass2=findViewById(R.id.xmlETxtPas2);
         ok=findViewById(R.id.xmlBtnOk);
 
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+
+        bd= FirebaseDatabase.getInstance().getReference();
+
 
 
 
@@ -58,8 +58,28 @@ public class Registro extends AppCompatActivity {
                 }else{
                     if (pass1.getText().toString().equals(pass2.getText().toString())){
                         if (pass1.getText().toString().trim().length()>6 ){
+                            consulta();
 
                            //aqui es la autenticacion
+                            Map<String, Object> datosUsuario=new HashMap<>();
+                            datosUsuario.put("nombre",name.getText().toString().trim());
+                            datosUsuario.put("apellido",lName.getText().toString().trim());
+                            datosUsuario.put("email",email.getText().toString().trim());
+                            datosUsuario.put("password",pass1.getText().toString().trim());
+
+                            datosUsuario.put("semestre",2);
+                            datosUsuario.put("notas","hola estas son tus notas:   ");
+
+                            bd.child("Usuario").push().setValue(datosUsuario);
+
+                            name.setText("");
+                            lName.setText("");
+                            email.setText("");
+                            pass1.setText("");
+                            pass2.setText("");
+
+                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(i);
 
                         }else{
                             Toast.makeText(getApplicationContext(),
@@ -76,27 +96,23 @@ public class Registro extends AppCompatActivity {
         });
     }
 
-    private void updateUI(FirebaseUser user) {
-        //hideProgressDialog();
-        if (user != null) {
-//            mStatusTextView.setText(getString(R.string.emailpassword_status_fmt,
-//                    user.getEmail(), user.isEmailVerified()));
-//            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+    public void consulta(){
+        bd.child("Usuario").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot:dataSnapshot.getChildren() ){
 
-            findViewById(R.id.xmlETxtPas1).setVisibility(View.GONE);
-            findViewById(R.id.xmlETxtPas2).setVisibility(View.GONE);
-            //findViewById(R.id.signedInButtons).setVisibility(View.VISIBLE);
+                }
+            }
 
-            findViewById(R.id.xmlETxtEmail).setEnabled(!user.isEmailVerified());
-        } else {
-//            mStatusTextView.setText(R.string.signed_out);
-//            mDetailTextView.setText(null);
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            findViewById(R.id.xmlETxtPas1).setVisibility(View.GONE);
-            findViewById(R.id.xmlETxtPas2).setVisibility(View.GONE);
-            //findViewById(R.id.signedInButtons).setVisibility(View.GONE);
-        }
+            }
+        });
     }
+
+
 
 
 }
