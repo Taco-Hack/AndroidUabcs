@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.Jaime.uabcsestudiantil.Ususario.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,13 +36,7 @@ public class Registro extends AppCompatActivity {
         pass2=findViewById(R.id.xmlETxtPas2);
         ok=findViewById(R.id.xmlBtnOk);
 
-
-
         bd= FirebaseDatabase.getInstance().getReference();
-
-
-
-
 
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,9 +53,8 @@ public class Registro extends AppCompatActivity {
                 }else{
                     if (pass1.getText().toString().equals(pass2.getText().toString())){
                         if (pass1.getText().toString().trim().length()>6 ){
-                            consulta();
 
-                           //aqui es la autenticacion
+
                             Map<String, Object> datosUsuario=new HashMap<>();
                             datosUsuario.put("nombre",name.getText().toString().trim());
                             datosUsuario.put("apellido",lName.getText().toString().trim());
@@ -81,6 +75,10 @@ public class Registro extends AppCompatActivity {
                             Intent i = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(i);
 
+
+
+
+
                         }else{
                             Toast.makeText(getApplicationContext(),
                                     "Contraseñas muy pequeña",
@@ -95,24 +93,38 @@ public class Registro extends AppCompatActivity {
             }
         });
     }
-
-    public void consulta(){
-        bd.child("Usuario").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot:dataSnapshot.getChildren() ){
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
-
-
-
-
 }
+
+/*
+bd.child("Usuario").addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    for (DataSnapshot snapshot:dataSnapshot.getChildren() ){
+                                        Usuario u= snapshot.getValue(Usuario.class);
+                                        if (u.getEmail().equals(email.getText().toString()) ){
+                                            bandera[0] =true;
+
+                                            Toast.makeText(getApplicationContext(),"El email ya existe",Toast.LENGTH_SHORT).show();
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                            });
+
+
+
+
+                            if(bandera[0]){
+                                //aqui es la autenticacion
+                                Toast.makeText(getApplicationContext(),"prueba",Toast.LENGTH_SHORT).show();
+                            }else
+                            {
+
+                            }
+
+ */

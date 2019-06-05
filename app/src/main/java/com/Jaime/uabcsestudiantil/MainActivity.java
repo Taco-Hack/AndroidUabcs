@@ -8,9 +8,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.Jaime.uabcsestudiantil.Ususario.Usuario;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
+
 public class MainActivity extends AppCompatActivity {
     private Button ok,registro;
     private EditText email,pass;
+
+    private DatabaseReference bd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +47,28 @@ public class MainActivity extends AppCompatActivity {
                 }else{
 
                     //consultar si existe :v
+                    bd.child("Usuario").addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange( DataSnapshot dataSnapshot) {
+
+//                            for (DataSnapshot snapshot:dataSnapshot.getChildren() ){
+//                                Usuario u= snapshot.getValue(Usuario.class);
+//                                if (u.getEmail().equals(email.getText().toString()) ){
+//
+//
+//                                    Toast.makeText(getApplicationContext(),"El email ya existe",Toast.LENGTH_SHORT).show();
+//                                    break;
+//                                }
+//                            }
+
+                        }
+
+                        @Override
+                        public void onCancelled( DatabaseError databaseError) {
+
+                        }
+                    });
+
 
                     Intent i = new Intent(getApplicationContext(), Menu.class);
                     startActivity(i);

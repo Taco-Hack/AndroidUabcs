@@ -7,6 +7,9 @@ public class Usuario {
     String password;
     int semestre;
 
+    public Usuario() {
+
+    }
     public Usuario(String nombre, String apellido, String email, String password, int semestre, String notas) {
         this.nombre = nombre;
         this.apellido = apellido;
