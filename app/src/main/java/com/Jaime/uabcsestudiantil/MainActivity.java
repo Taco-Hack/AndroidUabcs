@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Menu.class);
+                startActivity(i);
+
                 if (email.getText().toString().isEmpty() ||
                         pass.getText().toString().isEmpty() ){
                     Toast.makeText(getApplicationContext(),
@@ -47,31 +50,31 @@ public class MainActivity extends AppCompatActivity {
                 }else{
 
                     //consultar si existe :v
-                    bd.child("Usuario").addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange( DataSnapshot dataSnapshot) {
-
-//                            for (DataSnapshot snapshot:dataSnapshot.getChildren() ){
-//                                Usuario u= snapshot.getValue(Usuario.class);
-//                                if (u.getEmail().equals(email.getText().toString()) ){
+//                    bd.child("Usuario").addValueEventListener(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange( DataSnapshot dataSnapshot) {
 //
+////                            for (DataSnapshot snapshot:dataSnapshot.getChildren() ){
+////                                Usuario u= snapshot.getValue(Usuario.class);
+////                                if (u.getEmail().equals(email.getText().toString()) ){
+////
+////
+////                                    Toast.makeText(getApplicationContext(),"El email ya existe",Toast.LENGTH_SHORT).show();
+////                                    break;
+////                                }
+////                            }
 //
-//                                    Toast.makeText(getApplicationContext(),"El email ya existe",Toast.LENGTH_SHORT).show();
-//                                    break;
-//                                }
-//                            }
-
-                        }
-
-                        @Override
-                        public void onCancelled( DatabaseError databaseError) {
-
-                        }
-                    });
+//                        }
+//
+//                        @Override
+//                        public void onCancelled( DatabaseError databaseError) {
+//
+//                        }
+//                    });
 
 
-                    Intent i = new Intent(getApplicationContext(), Menu.class);
-                    startActivity(i);
+//                    Intent i = new Intent(getApplicationContext(), Menu.class);
+//                    startActivity(i); // descomentar
                 }
 
             }

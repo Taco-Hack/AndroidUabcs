@@ -11,4 +11,5 @@
     <string name="hello_blank_fragment">hola perro soy el fragment mapa :v</string>
     <string name="hello_blank_fragment_usuario">hola perro soy el fragment usuario :v</string>
     <string name="title_activity_gmaps">Map</string>
+    <string name="title_activity_mapa">Map</string>
 </resources>

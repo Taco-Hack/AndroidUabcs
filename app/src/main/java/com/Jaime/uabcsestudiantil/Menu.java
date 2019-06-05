@@ -9,9 +9,9 @@ import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class Menu extends AppCompatActivity implements Mapa.OnFragmentInteractionListener,Usuarios.OnFragmentInteractionListener{
+public class Menu extends AppCompatActivity implements Mapita.OnFragmentInteractionListener,Usuarios.OnFragmentInteractionListener{
     private TextView mTextMessage;
-    Mapa m;
+    Mapita m;
     Usuarios u;
     FragmentTransaction ft;
 
@@ -47,8 +47,9 @@ public class Menu extends AppCompatActivity implements Mapa.OnFragmentInteractio
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        m=new Mapa();
+
         u=new Usuarios();
+        m= new Mapita();
         getSupportFragmentManager().beginTransaction().add(R.id.xmlContendorFragment, m).commit();
     }
 
