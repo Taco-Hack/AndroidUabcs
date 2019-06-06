@@ -5,7 +5,7 @@
     <string name="tab_text_2">Tab2</string>
     <string name="title_mapa">Mapa</string>
     <string name="title_usuario">Ususario</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_profesores">Profesores</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">hola perro soy el fragment mapa :v</string>
