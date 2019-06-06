@@ -5,19 +5,10 @@ public class Usuario {
     String apellido;
     String email;
     String password;
-    int semestre;
+    String semestre;
+    String carrera;
+    String notas;
 
-    public Usuario() {
-
-    }
-    public Usuario(String nombre, String apellido, String email, String password, int semestre, String notas) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.password = password;
-        this.semestre = semestre;
-        this.notas = notas;
-    }
 
     public String getNombre() {
         return nombre;
@@ -51,12 +42,20 @@ public class Usuario {
         this.password = password;
     }
 
-    public int getSemestre() {
+    public String getSemestre() {
         return semestre;
     }
 
-    public void setSemestre(int semestre) {
+    public void setSemestre(String semestre) {
         this.semestre = semestre;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
     }
 
     public String getNotas() {
@@ -67,7 +66,11 @@ public class Usuario {
         this.notas = notas;
     }
 
-    String notas;
+    public Usuario() {
+
+    }
+
+
 
 
 }

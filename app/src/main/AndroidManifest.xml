@@ -35,6 +35,9 @@
             android:name=".MapaActivity"
             android:label="@string/title_activity_mapa" />
         <activity
+            android:name=".Registro"
+            android:label="Registro" />
+        <activity
             android:name=".Menu"
             android:label="@string/title_activity_menu" />
         <activity android:name=".MainActivity">

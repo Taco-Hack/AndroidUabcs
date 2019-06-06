@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="carreras">
+        <item>Carrera</item>
+        <item>IDS</item>
+        <item>ITC</item>
+        <item>LATI</item>
+    </string-array>
+    <string-array name="semestre">
+        <item>Semestre</item>
+        <item>2do.</item>
+    </string-array>
+</resources>
