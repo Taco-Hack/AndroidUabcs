@@ -35,6 +35,9 @@
             android:name=".MapaActivity"
             android:label="@string/title_activity_mapa" />
         <activity
+            android:name=".AEdificios"
+            android:label="Aulas" />
+        <activity
             android:name=".Registro"
             android:label="Registro" />
         <activity
@@ -42,7 +45,7 @@
             android:label="@string/title_activity_menu" />
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"  />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

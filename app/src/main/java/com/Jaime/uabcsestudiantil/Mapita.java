@@ -160,28 +160,14 @@ public class Mapita extends Fragment implements OnMapReadyCallback,GoogleMap.OnM
         Intent i;
         switch (marker.getId()){
             case "m0":
-                i = new Intent(getContext(),Edificios.class);
-                i.putExtra("titulo",marker.getTitle());
-                startActivity(i);
-
-                break;
             case "m1":
-                i = new Intent(getContext(),Edificios.class);
-                i.putExtra("titulo",marker.getTitle());
-                startActivity(i);
-
-                break;
             case "m2":
-                i = new Intent(getContext(),Edificios.class);
-                i.putExtra("titulo",marker.getTitle());
-                startActivity(i);
-
-                break;
             case "m3":
-                i = new Intent(getContext(),Edificios.class);
+                i = new Intent(getContext(),AEdificios.class);
+                i.putExtra("id",marker.getId());
                 i.putExtra("titulo",marker.getTitle());
+                Toast.makeText(getContext(),marker.getId()+" ",Toast.LENGTH_SHORT).show();
                 startActivity(i);
-
                 break;
         }
 
