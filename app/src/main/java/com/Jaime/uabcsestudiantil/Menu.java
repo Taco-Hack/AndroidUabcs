@@ -9,10 +9,14 @@ import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class Menu extends AppCompatActivity implements Mapita.OnFragmentInteractionListener,Usuarios.OnFragmentInteractionListener{
+public class Menu extends AppCompatActivity implements Mapita.OnFragmentInteractionListener,
+        Usuarios.OnFragmentInteractionListener,
+        MasterHorario.OnFragmentInteractionListener{
+
     private TextView mTextMessage;
     Mapita m;
     Usuarios u;
+    MasterHorario h;
     FragmentTransaction ft;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -32,7 +36,8 @@ public class Menu extends AppCompatActivity implements Mapita.OnFragmentInteract
                     ft.commit();
                     return true;
                 case R.id.navigation_notifications:
-                    //mTextMessage.setText(R.string.title_notifications);
+                    ft.replace(R.id.xmlContendorFragment,h);
+                    ft.commit();
                     return true;
             }
             return false;
@@ -56,6 +61,8 @@ public class Menu extends AppCompatActivity implements Mapita.OnFragmentInteract
         u.setArguments(arg);
 
         m= new Mapita();
+        h=new MasterHorario();
+        h.setArguments(arg);
         getSupportFragmentManager().beginTransaction().add(R.id.xmlContendorFragment, m).commit();
     }
 
