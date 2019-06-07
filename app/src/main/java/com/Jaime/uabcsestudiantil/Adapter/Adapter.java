@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.Jaime.uabcsestudiantil.Materias.Materias;
 import com.Jaime.uabcsestudiantil.R;
 
 import java.util.ArrayList;
@@ -51,5 +52,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public void asignarDatos(String s) {
             texto.setText(s);
         }
+
     }
+
 }

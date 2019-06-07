@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Edificios"></activity>
+        <!--<activity android:name=".Horarios"></activity>-->
+        <!--<activity android:name=".Edificios" />-->
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,6 +36,9 @@
             android:name=".MapaActivity"
             android:label="@string/title_activity_mapa" />
         <activity
+            android:name=".Horarios"
+            android:label="Horarios" />
+        <activity
             android:name=".AEdificios"
             android:label="Aulas" />
         <activity
@@ -45,7 +49,7 @@
             android:label="@string/title_activity_menu" />
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"  />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

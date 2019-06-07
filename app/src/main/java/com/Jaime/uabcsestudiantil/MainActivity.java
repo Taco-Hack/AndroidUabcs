@@ -79,9 +79,11 @@ public class MainActivity extends AppCompatActivity {
                     if (!bandera){
                         Toast.makeText(getApplicationContext(),"Usuario invalido ",Toast.LENGTH_SHORT).show();
                     }else{
+                        Bundle b= new Bundle();
                         Toast.makeText(getApplicationContext(),"Bienvenido ",Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(getApplicationContext(), Menu.class);
-                        i.putExtra("Usuario",sName);
+                        b.putString("Carrera",sName);
+                        i.putExtras(b);
                         startActivity(i); // descomentar
                     }
                 }
@@ -110,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
     public void cicloForEach(){
         for(Usuario a : lisUsu){
             if ( a.getEmail().equals(sEmail) ){
-                sName=a.getNombre();
+                sName=a.getCarrera();
                 bandera=true;
                 break;
             }

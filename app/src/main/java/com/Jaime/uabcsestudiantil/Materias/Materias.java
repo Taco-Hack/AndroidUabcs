@@ -10,7 +10,7 @@ public class Materias {
         return idCarrera;
     }
 
-    public void setIdCarrera(String idCarrera) {
+    public void setIdCarrera(String idCarrera){
         this.idCarrera = idCarrera;
     }
 

@@ -1,6 +1,7 @@
 package com.Jaime.uabcsestudiantil;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -41,7 +42,12 @@ public class Usuarios extends Fragment {
 
         horario.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getContext(),"hola",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"hola",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getContext(),Horarios.class);
+                String texto=getArguments().getString("Carrera");
+                i.putExtra("Carrera",texto);
+                startActivity(i);
+
             }
         });
         apuntes.setOnClickListener(new View.OnClickListener() {

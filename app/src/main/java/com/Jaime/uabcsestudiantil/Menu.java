@@ -47,8 +47,14 @@ public class Menu extends AppCompatActivity implements Mapita.OnFragmentInteract
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+        Bundle bun=getIntent().getExtras();
+        String texto=bun.getString("Carrera");
+        Bundle arg=new Bundle();
+        arg.putString("Carrera",texto);
 
         u=new Usuarios();
+        u.setArguments(arg);
+
         m= new Mapita();
         getSupportFragmentManager().beginTransaction().add(R.id.xmlContendorFragment, m).commit();
     }
