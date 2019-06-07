@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         consulta();
 
-//m0 = macro, m3 = sistemas, m2 = dele
 
 
         registro.setOnClickListener(new View.OnClickListener() {
@@ -201,5 +200,672 @@ public class MainActivity extends AppCompatActivity {
         datosEdificios.put("nombre","Aula ALAN TURING");
         datosEdificios.put("idEdificio","m3");
         bd.child("Aulas").push().setValue(datosEdificios);
+
+       // Map<String, String> datosEdificios=new HashMap<>();
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas 2");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","07:00 - 09:00");
+        datosEdificios.put("profesor","Juan Francisco Rios Franco");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas 2");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","07:00 - 09:00");
+        datosEdificios.put("profesor","Juan Francisco Rios Franco");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas 2");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Arturo Villegas Fimbres");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas 2");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","07:00 - 09:00");
+        datosEdificios.put("profesor","Juan Francisco Rios Franco");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas 2");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Arturo Villegas Fimbres");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas 2");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Arturo Villegas Fimbres");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //Programacion//---------------------------------------------------------------******
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Israel Duran Encinas");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Israel Duran Encinas");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Israel Duran Encinas");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Elvia Esthel Aispuro Felixs");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Elvia Esthel Aispuro Felix");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Elvia Esthel Aispuro Felix");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Antonio Aguilar");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Antonio Aguilar");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Antonio Aguilar");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //mate discretas//---------------------------------------------******
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas Discretas");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Miriam Maray Carreño");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas Discretas");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Miriam Maray Carreño");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas Discretas");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Miriam Maray Carreño");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Matematicas Discretas");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Miriam Maray Carreño");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //Electro Basic//----------------------------------------****
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Electronica Basica");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Miguel Espiritu Jimenez");
+        datosEdificios.put("salon","Aula TESLA");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Electronica Basica");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Miguel Espiritu Jimenez");
+        datosEdificios.put("salon","Aula TESLA");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Electronica Basica");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Jorge Calderon Palafox");
+        datosEdificios.put("salon","Aula TESLA");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Ingles 2");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Marisol Mendez Ramirez");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Ingles 2");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Marisol Mendez Ramirez");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //etica//-----------------------------------------------------***********
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Etica Profecional y Derecho Informatico");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Alejandro Espinoza");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Etica Profecional y Derecho Informatico");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","07:00 - 09:00");
+        datosEdificios.put("profesor","Alejandro Espinoza");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Etica Profecional y Derecho Informatico");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Alan Baeza Meza");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","IDS");
+        datosEdificios.put("nombre","Etica Profecional y Derecho Informatico");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Alan Baeza Meza");
+        datosEdificios.put("salon","Aula LISP");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //ITC//-------------------------------------------------------------------------******
+
+        //fisica//--------------------------------------------------
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Fisica II");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","07:00 - 09:00");
+        datosEdificios.put("profesor","Armando Monge Quevedo");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Fisica II");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","07:00 - 09:00");
+        datosEdificios.put("profesor","Armando Monge Quevedo");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Fisica II");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Armando Monge Quevedo");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Fisica II");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Armando Monge Quevedo");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //mate//----------------------------------------------******************
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas II");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Luis Silva");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas II");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Luis Silva");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas II");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Luis Silva");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas II");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Arturo villegas Fimbres");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas II");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Arturo villegas Fimbres");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas II");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Arturo villegas Fimbres");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //ingles2--------------------------------------------------------**************
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Ingles II");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Marisol Mendez Ramirez");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Ingles II");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","Marisol Mendez Ramirez");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Ingles II");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Veronica Carrillo y Carrillo");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Ingles II");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Veronica Carrillo y Carrillo");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //mate dis//------------------------------------------**********+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas Discretas");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","07:00 - 09:00");
+        datosEdificios.put("profesor","Nelson Olachea Urias");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas Discretas");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","07:00 - 09:00");
+        datosEdificios.put("profesor","Nelson Olachea Urias");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas Discretas");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Jose Luis Torres Pinzon");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Matematicas Discretas");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Jose Luis Torres Pinzon");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //Ciencias Nat//------------------------------------------------****
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Ciencias Naturales y Desarrollo Sustentable");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","09:00 - 11:00");
+        datosEdificios.put("profesor","David Petatan");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Ciencias Naturales y Desarrollo Sustentable");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","07:00 - 09:00");
+        datosEdificios.put("profesor","David Petatan");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Ciencias Naturales y Desarrollo Sustentable");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","David Petatan");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Ciencias Naturales y Desarrollo Sustentable");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","David Petatan");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //Programacion///---------------------------------------*************
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Jonathan Soto Muñoz");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Jonathan Soto Muñoz");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Jonathan Soto Muñoz");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Jonathan Soto Muñoz");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Julio Chavez Ocampo");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Julio Chavez Ocampo");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Jonathan Soto Muñoz");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Jonathan Soto Muñoz");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //empre//---------------------------------------------------*********+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Emprendurismo");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Miguel Ojeda");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Emprendurismo");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","11:00 - 13:00");
+        datosEdificios.put("profesor","Miguel Ojeda");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Emprendurismo");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Elvia Marin");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","ITC");
+        datosEdificios.put("nombre","Emprendurismo");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Elvia Marin");
+        datosEdificios.put("salon","Aula RUBY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //lati//jotos//---------------------------------------------------****
+        //model org y siste
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Modelo Organizacional y Sistemas de Informacion");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Aida Sanchez Paz Rubio");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Modelo Organizacional y Sistemas de Informacion");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Aida Sanchez Paz Rubio");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //Estruc Datos-----------------------------------------------**************
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Estructura de Datos");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Miriam Maray Carreño");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Estructura de Datos");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Miriam Maray Carreño");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Estructura de Datos");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Miriam Maray Carreño");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //Programacion-------------------------------------------------*********
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Yuliana Romero Castro");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Yuliana Romero Castro");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Yuliana Romero Castro");
+        datosEdificios.put("salon","Laboratorio A");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Aaron Chavez");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Aaron Chavez");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Programacion");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Aaron Chavez");
+        datosEdificios.put("salon","Laboratorio F");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //Paradigmas Tecnologicos//------------------------------------******
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Paradigmas Tecnologicos");
+        datosEdificios.put("dia","Lunes");
+        datosEdificios.put("hora","16:00 - 18:00");
+        datosEdificios.put("profesor","Javier Aguilar Parra");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Paradigmas Tecnologicos");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Javier Aguilar Parra");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //ingles------------------------------------------------------***********
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Ingles 2");
+        datosEdificios.put("dia","Martes");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Veronica Carrillo y Carrillo");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Ingles 2");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Veronica Carrillo y Carrillo");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        //algebra lineal//-----------------------------------------------*******
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Algebra Lineal");
+        datosEdificios.put("dia","Miercoles");
+        datosEdificios.put("hora","18:00 - 20:00");
+        datosEdificios.put("profesor","Arturo Villegas Fimbres");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Algebra Lineal");
+        datosEdificios.put("dia","Jueves");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Arturo Villegas Fimbres");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+        datosEdificios.put("idCarrera","LATI");
+        datosEdificios.put("nombre","Algebra Lineal");
+        datosEdificios.put("dia","Viernes");
+        datosEdificios.put("hora","20:00 - 22:00");
+        datosEdificios.put("profesor","Arturo Villegas Fimbres");
+        datosEdificios.put("salon","Aula ASSEMBLY");
+        bd.child("Materias").push().setValue(datosEdificios);
+
+
     }
 }
