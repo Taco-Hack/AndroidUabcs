@@ -14,6 +14,7 @@ public class Menu extends AppCompatActivity implements Mapita.OnFragmentInteract
         MasterHorario.OnFragmentInteractionListener{
 
     private TextView mTextMessage;
+
     Mapita m;
     Usuarios u;
     MasterHorario h;
@@ -54,14 +55,16 @@ public class Menu extends AppCompatActivity implements Mapita.OnFragmentInteract
 
         Bundle bun=getIntent().getExtras();
         String texto=bun.getString("Carrera");
+        String email=bun.getString("id");
         Bundle arg=new Bundle();
         arg.putString("Carrera",texto);
-
-        u=new Usuarios();
-        u.setArguments(arg);
+        arg.putString("id",email);
 
         m= new Mapita();
+        u=new Usuarios();
         h=new MasterHorario();
+
+        u.setArguments(arg);
         h.setArguments(arg);
         getSupportFragmentManager().beginTransaction().add(R.id.xmlContendorFragment, m).commit();
     }

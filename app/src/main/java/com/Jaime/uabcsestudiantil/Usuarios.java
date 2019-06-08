@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class Usuarios extends Fragment {
 
     CardView horario,apuntes,califi;
+    String id;
 
     public Usuarios() {
     }
@@ -45,7 +46,9 @@ public class Usuarios extends Fragment {
                 //Toast.makeText(getContext(),"hola",Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(getContext(),Horarios.class);
                 String texto=getArguments().getString("Carrera");
+                id=getArguments().getString("id");
                 i.putExtra("Carrera",texto);
+                i.putExtra("id",id);
                 startActivity(i);
 
             }
@@ -53,6 +56,12 @@ public class Usuarios extends Fragment {
         apuntes.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText(getContext(),"hola",Toast.LENGTH_SHORT).show();
+                id=getArguments().getString("id");
+                Intent i = new Intent(getContext(),Nota.class);
+                Toast.makeText(getContext(),id,Toast.LENGTH_SHORT).show();
+                i.putExtra("id",id);
+                startActivity(i);
+
             }
         });
         califi.setOnClickListener(new View.OnClickListener() {

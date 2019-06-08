@@ -18,8 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity android:name=".Horarios"></activity>-->
-        <!--<activity android:name=".Edificios" />-->
+        <activity
+            android:name=".Nota"
+            android:label="TusNotas♥"></activity>
+        <!-- <activity android:name=".Horarios"></activity> -->
+        <!-- <activity android:name=".Edificios" /> -->
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

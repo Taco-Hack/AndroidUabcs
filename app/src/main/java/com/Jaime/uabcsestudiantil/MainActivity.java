@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Bienvenido ",Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(getApplicationContext(), Menu.class);
                         b.putString("Carrera",sName);
+                        b.putString("id",sEmail);
                         i.putExtras(b);
                         startActivity(i); // descomentar
                     }
