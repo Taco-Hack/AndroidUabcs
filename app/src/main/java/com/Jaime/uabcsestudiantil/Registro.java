@@ -109,6 +109,7 @@ public class Registro extends AppCompatActivity {
                             }else{
                                 Toast.makeText(getApplicationContext(),"email ya existe",Toast.LENGTH_SHORT).show();
                             }
+                            bandera=false;
 
                         }else{
                             Toast.makeText(getApplicationContext(),

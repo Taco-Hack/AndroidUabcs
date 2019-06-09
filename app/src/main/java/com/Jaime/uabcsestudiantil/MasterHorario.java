@@ -55,7 +55,7 @@ public class MasterHorario extends Fragment {
         View v = inflater.inflate(R.layout.fragment_master_horario,container,false);
 
         datos=getArguments().getString("Carrera");
-        Toast.makeText(getContext()," "+datos,Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getContext()," "+datos,Toast.LENGTH_SHORT).show();
 
         bd= FirebaseDatabase.getInstance().getReference();
 
@@ -114,7 +114,7 @@ public class MasterHorario extends Fragment {
             @Override
             public void onDataChange( DataSnapshot dataSnapshot) {
 
-                Toast.makeText(getContext()," sipi ", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getContext()," sipi ", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot snapshot:dataSnapshot.getChildren() ){
                     //Toast.makeText(getContext()," s ",Toast.LENGTH_SHORT).show();
@@ -122,7 +122,7 @@ public class MasterHorario extends Fragment {
                     lisMast.add(a);
                 }
                 cicloForEach();
-                Toast.makeText(getContext()," "+lisMast.size(),Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getContext()," "+lisMast.size(),Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onCancelled( DatabaseError databaseError) {
@@ -131,7 +131,7 @@ public class MasterHorario extends Fragment {
         });
     }
     public void cicloForEach(){
-        Toast.makeText(getContext()," "+lisMast.size()+" ",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext()," "+lisMast.size()+" ",Toast.LENGTH_SHORT).show();
         for(Materias a : lisMast){
             //lisDatos.add(a.getNombre());
 

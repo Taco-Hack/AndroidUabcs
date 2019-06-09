@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button ok,registro;
     private EditText email,pass;
 
-    private String sEmail, sPass,sName;
+    private String sEmail, sPass,sCarrera,sNombre;
     private Boolean bandera;
     private List<Usuario> lisUsu;
 
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
          sPass = pass.getText().toString().trim();
          lisUsu = new ArrayList<Usuario>();
          bandera=false;
+         sNombre="";
 
         bd= FirebaseDatabase.getInstance().getReference();
 
@@ -82,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
                         Bundle b= new Bundle();
                         Toast.makeText(getApplicationContext(),"Bienvenido ",Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(getApplicationContext(), Menu.class);
-                        b.putString("Carrera",sName);
-                        b.putString("id",sEmail);
+                        b.putString("Carrera",sCarrera);
+                        b.putString("id",sNombre);
                         i.putExtras(b);
                         startActivity(i); // descomentar
                     }
@@ -113,7 +114,9 @@ public class MainActivity extends AppCompatActivity {
     public void cicloForEach(){
         for(Usuario a : lisUsu){
             if ( a.getEmail().equals(sEmail) ){
-                sName=a.getCarrera();
+                sCarrera=a.getCarrera();
+                sNombre=a.getNombre();
+
                 bandera=true;
                 break;
             }

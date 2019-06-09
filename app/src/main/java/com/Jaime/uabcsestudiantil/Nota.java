@@ -22,7 +22,7 @@ public class Nota extends AppCompatActivity {
 
     private DatabaseReference bd;
     ArrayList<Usuario> listMat;
-    String email;
+    String nombre;
     EditText nota;
     Button guardar;
     Usuario user;
@@ -38,7 +38,7 @@ public class Nota extends AppCompatActivity {
         listMat = new ArrayList<Usuario>();
 
         Bundle bun=getIntent().getExtras();
-        email=bun.getString("id");
+        nombre=bun.getString("id");
         user=new Usuario();
 
         consulta();
@@ -47,7 +47,7 @@ public class Nota extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 user.setNotas(nota.getText().toString());
-                bd.child("Usuario").child(user.getEmail()).setValue(user);
+                bd.child("Usuario").child(user.getNombre()).setValue(user);
                 Toast.makeText(getApplicationContext(),"Guardado correcto",Toast.LENGTH_SHORT).show();
             }
         });
@@ -79,7 +79,7 @@ public class Nota extends AppCompatActivity {
         //Toast.makeText(getContext()," "+lisMast.size()+" ",Toast.LENGTH_SHORT).show();
         for(Usuario a : listMat){
             //Toast.makeText(getApplicationContext(),a.getEmail()+" "+email,Toast.LENGTH_SHORT).show();
-            if ( a.getEmail().equals(email) ){
+            if ( a.getNombre().equals(nombre) ){
                 //Toast.makeText(getContext(),"simon",1).show();
                 //asignamos a un text las a.getnotas
                 user=a;
