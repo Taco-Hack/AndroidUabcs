@@ -48,8 +48,8 @@ public class Mapita extends Fragment implements OnMapReadyCallback,GoogleMap.OnM
 
     private GoogleMap mMap;
     SupportMapFragment mapFragment;
-    private Marker marcador, mControl, mDele, mSistemas;
-    LatLng coordenada, cControl, cDele, cSistemas, lapaz;
+    private Marker marcador, mControl, mDele, mSistemas,mPoli,mBiblio,mHosp,mRadio,mRector;
+    LatLng coordenada, cControl, cDele, cSistemas, cPoli,cBiblio,cHosp,cRadio, cRector;
 
     double lat = 24.102457, lng = -110.316258;
     View view;
@@ -110,6 +110,11 @@ public class Mapita extends Fragment implements OnMapReadyCallback,GoogleMap.OnM
         cControl = new LatLng(24.102502, -110.315662);
         cDele = new LatLng(24.100365, -110.316689);
         cSistemas = new LatLng(24.102457, -110.316258);
+        cPoli = new LatLng(24.103153, -110.315869);
+        cBiblio = new LatLng(24.101780, -110.316429);
+        cHosp = new LatLng(24.101759, -110.315886);
+        cRadio = new LatLng(24.101962, -110.315816);
+        cRector = new LatLng(24.101053, -110.316590);
         CameraPosition positions = new Builder().target(coordenada).tilt(90).build();
 
         LatLng lapaz= new LatLng(lat, lng);
@@ -122,6 +127,16 @@ public class Mapita extends Fragment implements OnMapReadyCallback,GoogleMap.OnM
         mDele = mMap.addMarker(new MarkerOptions().position(cDele).title("Departamento de Lenguas Extrangeras")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
         mSistemas = mMap.addMarker(new MarkerOptions().position(cSistemas).title("Departamento de Sistemas Computacionales")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));//24.103153, -110.315869
+        mPoli = mMap.addMarker(new MarkerOptions().position(cPoli).title("Poliforo Universitario")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        mBiblio = mMap.addMarker(new MarkerOptions().position(cBiblio).title("Biblioteca Universitaria")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        mHosp= mMap.addMarker(new MarkerOptions().position(cHosp).title("Biblioteca Universitaria")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        mRadio= mMap.addMarker(new MarkerOptions().position(cRadio).title("Biblioteca Universitaria")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        mRector= mMap.addMarker(new MarkerOptions().position(cRector).title("Rectoria")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
 
@@ -135,17 +150,10 @@ public class Mapita extends Fragment implements OnMapReadyCallback,GoogleMap.OnM
                 Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(getContext(),
                         Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         mMap.setMyLocationEnabled(true);
-        mMap.getUiSettings().setZoomControlsEnabled(false);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setMapToolbarEnabled(true);
 
@@ -157,12 +165,18 @@ public class Mapita extends Fragment implements OnMapReadyCallback,GoogleMap.OnM
     @Override
     public boolean onMarkerClick(Marker marker) {
 //m0 = macro, m3 = sistemas, m1 = controlescolar, m2 = dele
+        Toast.makeText(getContext(),marker.getId(),Toast.LENGTH_SHORT).show();
         Intent i;
         switch (marker.getId()){
             case "m0":
             case "m1":
             case "m2":
             case "m3":
+            case "m4":
+            case "m5":
+            case "m6":
+            case "m7":
+            case "m8":
                 i = new Intent(getContext(),AEdificios.class);
                 i.putExtra("id",marker.getId());
                 i.putExtra("titulo",marker.getTitle());

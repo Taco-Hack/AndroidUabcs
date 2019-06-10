@@ -7,8 +7,9 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="303dp"
+        android:layout_height="147dp"
+        android:layout_margin="10dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="50dp"
         app:contentPadding="@dimen/activity_horizontal_margin"
@@ -49,6 +50,17 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
+                android:id="@+id/fTxtDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dia"
+                android:textColor="#673AB7"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fTxtSalProf" />
+
+            <TextView
                 android:id="@+id/fTxtHorProf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +70,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fTxtSalProf"
+                app:layout_constraintTop_toBottomOf="@+id/fTxtDia"
                 app:layout_constraintVertical_bias="0.0" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>

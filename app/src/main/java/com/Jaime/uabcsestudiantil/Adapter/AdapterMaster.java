@@ -2,6 +2,7 @@ package com.Jaime.uabcsestudiantil.Adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,18 +40,21 @@ public class AdapterMaster extends RecyclerView.Adapter<AdapterMaster.ViewHolder
     }
 
     public class ViewHolderMaster extends RecyclerView.ViewHolder {
-        TextView nombre,salon,hora;
+        TextView nombre,salon,hora,dia;
         public ViewHolderMaster(@NonNull View itemView) {
             super(itemView);
             nombre=itemView.findViewById(R.id.fTxtNomProf);
             salon=itemView.findViewById(R.id.fTxtSalProf);
             hora=itemView.findViewById(R.id.fTxtHorProf);
+            dia=itemView.findViewById(R.id.fTxtDia);
         }
 
         public void asignarDatos(Materias materias) {
             nombre.setText(materias.getProfesor());
             salon.setText(materias.getSalon());
             hora.setText(materias.getHora());
+            dia.setText(materias.getDia());
+            dia.setText(materias.getDia());
 
         }
     }

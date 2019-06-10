@@ -6,64 +6,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/fTxtMat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Materia"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/fTxtProf"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/fTxtHora"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Hora"
-        android:textColor="#000000"
-        android:textSize="14sp"
+    <android.support.v7.widget.CardView
+        android:layout_width="289dp"
+        android:layout_height="144dp"
+        android:layout_margin="10dp"
+        android:elevation="@android:dimen/thumbnail_width"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="50dp"
+        app:contentPadding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fTxtDia"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/fTxtDia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dia"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fTxtSalon" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/fTxtSalon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Salon"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/fTxtDia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fTxtProf" />
+            <TextView
+                android:id="@+id/fTxtProf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profesor"
+                android:textColor="#673AB7"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/fTxtSalon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fTxtMat" />
 
-    <TextView
-        android:id="@+id/fTxtProf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Profesor"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/fTxtSalon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fTxtMat" />
+            <TextView
+                android:id="@+id/fTxtMat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Materia"
+                android:textColor="#673AB7"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/fTxtProf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fTxtJaime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#673AB7"
+                app:layout_constraintBottom_toTopOf="@+id/fTxtHora"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fTxtSalon" />
+
+            <TextView
+                android:id="@+id/fTxtHora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hora"
+                android:textColor="#673AB7"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fTxtJaime" />
+
+            <TextView
+                android:id="@+id/fTxtSalon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salon"
+                android:textColor="#673AB7"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/fTxtJaime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fTxtProf" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+
 </android.support.constraint.ConstraintLayout>

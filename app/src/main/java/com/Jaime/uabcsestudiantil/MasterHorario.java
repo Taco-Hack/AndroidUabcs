@@ -28,15 +28,15 @@ public class MasterHorario extends Fragment {
 
     private DatabaseReference bd;
 
-    ArrayList<Materias> lisMast,lisMastF;
+    ArrayList<Materias> lisMast,lisMastF,lisTarde,lisMatu;
     String datos;
-    RecyclerView rec;
+    RecyclerView rec,recT;
 
     public MasterHorario() {
         // Required empty public constructor
     }
 
-    public static MasterHorario newInstance(String param1, String param2) {
+    public static MasterHorario newInstance() {
         MasterHorario fragment = new MasterHorario();
         Bundle args = new Bundle();
         fragment.setArguments(args);
@@ -60,16 +60,23 @@ public class MasterHorario extends Fragment {
         bd= FirebaseDatabase.getInstance().getReference();
 
         lisMast = new ArrayList<Materias>();
-
         lisMastF = new ArrayList<Materias>();
+        lisTarde=new ArrayList<Materias>();
+        lisMatu=new ArrayList<Materias>();
+
 
         //falta instanciar el recycler, poner materias
 
         rec=v.findViewById(R.id.fRecMast);
+        recT=v.findViewById(R.id.fRecMastTarde);
         RecyclerView.LayoutManager layoutManager;
         rec.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL,false);
         rec.setLayoutManager(layoutManager);
+
+        recT.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL,false);
+        recT.setLayoutManager(layoutManager);
 
         consulta();
 
@@ -137,12 +144,27 @@ public class MasterHorario extends Fragment {
 
             //Toast.makeText(getApplicationContext(),a.getIdCarrera()+" "+datos,Toast.LENGTH_SHORT).show();
             if ( a.getIdCarrera().equals(datos) ){
-                //Toast.makeText(getContext(),"simon",1).show();
+                //Toast.makeText(getContext(),""+a.getDia(),Toast.LENGTH_SHORT).show();
                 lisMastF.add(a);
+                switch (a.getHora()){//matutino
+                    case "07:00 - 09:00":
+                    case "09:00 - 11:00":
+                    case "11:00 - 13:00":
+                        lisMatu.add(a);
+                        break;//tarde
+                    case "16:00 - 18:00":
+                    case "18:00 - 20:00":
+                    case "20:00 - 22:00":
+                        lisTarde.add(a);
+                        break;
+                }
             }
         }
-        AdapterMaster ma = new AdapterMaster(lisMastF);
+        AdapterMaster maT=new AdapterMaster(lisTarde);
+        AdapterMaster ma = new AdapterMaster(lisMatu);
+        Toast.makeText(getContext(),""+lisMatu.size(),Toast.LENGTH_SHORT).show();
         rec.setAdapter(ma);
+        recT.setAdapter(maT);
     }
 
 }

@@ -55,10 +55,10 @@ public class Usuarios extends Fragment {
         });
         apuntes.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getContext(),"hola",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"hola",Toast.LENGTH_SHORT).show();
                 id=getArguments().getString("id");
                 Intent i = new Intent(getContext(),Nota.class);
-                Toast.makeText(getContext(),id,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),id,Toast.LENGTH_SHORT).show();
                 i.putExtra("id",id);
                 startActivity(i);
 
@@ -66,7 +66,7 @@ public class Usuarios extends Fragment {
         });
         califi.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getContext(),"hola",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"hola",Toast.LENGTH_SHORT).show();
             }
         });
 

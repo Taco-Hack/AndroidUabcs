@@ -45,8 +45,8 @@ public class AdapterMat extends RecyclerView.Adapter<AdapterMat.ViewHolderM> {
             mat=itemView.findViewById(R.id.fTxtMat);
             prof=itemView.findViewById(R.id.fTxtProf);
             salon=itemView.findViewById(R.id.fTxtSalon);
-            dia=itemView.findViewById(R.id.fTxtDia);
             hora=itemView.findViewById(R.id.fTxtHora);
+            dia=itemView.findViewById(R.id.fTxtJaime);
         }
 
         public void asignarDatos(Materias m) {
@@ -55,6 +55,7 @@ public class AdapterMat extends RecyclerView.Adapter<AdapterMat.ViewHolderM> {
             salon.setText(m.getSalon());
             dia.setText(m.getDia());
             hora.setText(m.getHora());
+            dia.setText(m.getDia());
 
         }
     }
