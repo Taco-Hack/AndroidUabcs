@@ -165,7 +165,7 @@ public class Mapita extends Fragment implements OnMapReadyCallback,GoogleMap.OnM
     @Override
     public boolean onMarkerClick(Marker marker) {
 //m0 = macro, m3 = sistemas, m1 = controlescolar, m2 = dele
-        Toast.makeText(getContext(),marker.getId(),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(),marker.getId(),Toast.LENGTH_SHORT).show();
         Intent i;
         switch (marker.getId()){
             case "m0":
